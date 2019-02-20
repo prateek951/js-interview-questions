@@ -17,4 +17,4 @@ const debounce = function (fn, d) {
   }
 }
 
-const betterFunction = debounce(getData
+const betterFunction = debounce(getData,3000);
