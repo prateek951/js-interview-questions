@@ -1,0 +1,14 @@
+// WHAT IS FUNCTION EXECUTION CONTEXT 
+// The function execution context is created when a function is invoked
+
+//The only time an execution context is created when the Javascript engine starts interpreting your code that is the global execution context. After that whenever a function is invoked 
+
+//DESCRIBE THE CREATION PHASE OF THE GLOBAL EXECUTION CONTEXT 
+
+//1.Create a global object 
+//2.Create an object called this 
+//3.Set up memory space for variables and
+//functions 
+//4.Assign variable declarations a default value of undefined while plaing any function declarations in memory 
+
+
