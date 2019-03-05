@@ -45,7 +45,13 @@ function makeAdder(x) {
 	//Inside the makeAdder function 
   //we create another function called 
   //inner which is returned from this function 
+  //INNER FUNCTION WILL CREATE A CLOSURE OVER THE OUTER'S FUNCTION'S EXECUTION CONTEXT 
   return function inner(y) { 
+    	//This needs to have access to the same variable environment 
+    
+    //Inner has a local variable y in its variable environment
+    //We need to know that whether the inner has a variable x in its variable environment.It does not. 
+//We will look up to the closest parent execution context to see if that variable exists.In the closure scope we see that it has a variable x in its variable environment and then it returns 5+2 which is 7 
      	return x+y;
     }
 }
@@ -56,3 +62,4 @@ var add5 = makeAdder(5);
 //add5 is a function that now references the inner function 
 //We can invoke it this creates a new execution context.Once its done it gets popped from the stack, then its closest parent execution context gets popped and we get the value of count as 7
 count = add5(2);
+
