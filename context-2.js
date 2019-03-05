@@ -63,3 +63,23 @@ var add5 = makeAdder(5);
 //We can invoke it this creates a new execution context.Once its done it gets popped from the stack, then its closest parent execution context gets popped and we get the value of count as 7
 count = add5(2);
 
+
+//1.When the Javascript program starts to run, it creates a global execution context. This execution context has two phases 
+
+//CREATION PHASE 
+
+//In the creation phase,in the global execution context,Javascript will create a global object, it will always create a this object,it will set aside memory space for any variables and functions.Variable declarations are assigned a default value of undefined which is called hoisting.Functions itself gets placed into memory 
+
+
+// The next type of the execution context is called the function execution context which will happen whenever a function is invoked 
+//The function execution context is exact
+//same as the global execution context except 
+//for creating the global object we create an arguments object and any arguments passed to the function are added if as if they were just the local variables to the execution context 
+//Then if you have a function inside of another function, even if the parent function's execution context is removed from the stack 
+//inner function will still retain access to the parent function's execution contextwhich is called closure 
+
+//SCOPE CHAIN 
+//Javascript will look for a variable in the current scope to see if it exists or not.If it does not exists, then it will go up the scope chain to the next closest parent execution context. It will look for that variable 
+
+
+
