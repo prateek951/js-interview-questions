@@ -37,3 +37,22 @@ function logName() {
 //Invoke the logName method creates a new execution context and pushes it to the call stack
 
 logName()
+
+
+var count = 0;
+
+function makeAdder(x) { 
+	//Inside the makeAdder function 
+  //we create another function called 
+  //inner which is returned from this function 
+  return function inner(y) { 
+     	return x+y;
+    }
+}
+
+//Invoke makeAdder function creates a new execution context 
+
+var add5 = makeAdder(5);
+//add5 is a function that now references the inner function 
+//We can invoke it this creates a new execution context.Once its done it gets popped from the stack, then its closest parent execution context gets popped and we get the value of count as 7
+count = add5(2);
